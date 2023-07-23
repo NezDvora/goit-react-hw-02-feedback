@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import css from './Statistics.module.css';
 
 export const Statistics = ({ stateValues, total, positive }) => {
   const totalFeedback = total;
@@ -14,7 +15,7 @@ export const Statistics = ({ stateValues, total, positive }) => {
     );
   }
   return (
-    <>
+    <div className={css.infoFeedback}>
       {staticArray}
       {
         <p key={totalFeedback}>
@@ -28,7 +29,7 @@ export const Statistics = ({ stateValues, total, positive }) => {
           {positivePercentage}%
         </p>
       }
-    </>
+    </div>
   );
 };
 
